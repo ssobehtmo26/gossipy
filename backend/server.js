@@ -6,16 +6,24 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+const cors = require("cors");
 
 dotenv.config();
 connectDB();
 const app = express();
 
+app.use(
+  cors({
+    origin: ["https://chatappbackend-sccd.onrender.com/"],
+    methods: ["POST", "GET", "PUT"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
-
 
 /*const __dirname1 = path.resolve();
 
@@ -44,7 +52,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://verdant-lolly-234618.netlify.app/",
+    origin: "https://chatappbackend-sccd.onrender.com/",
     // credentials: true,
   },
 });
