@@ -14,7 +14,7 @@ const Chatpage = () => {
       {user && <SideDrawer />}
       <Box
         d="flex"
-        flexDirection="row-reverse"
+        flexDirection="row"
         justifyContent="normal"
         w="100%"
         h="91.5vh"
