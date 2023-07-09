@@ -56,6 +56,7 @@ const GroupChatModal = ({ children }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
+          "Access-Control-Allow-Origin": 'true'
         },
       };
       const { data } = await axios.get(`https://chatappbackend-sccd.onrender.com/api/user?search=${search}`, config);

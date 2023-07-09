@@ -45,6 +45,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
+          "Access-Control-Allow-Origin": 'true'
         },
       };
 

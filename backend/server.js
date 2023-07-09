@@ -14,20 +14,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://chatappbackend-sccd.onrender.com/"],
+    origin: ["https://verdant-lolly-234618.netlify.app"],
     methods: ["POST", "GET", "PUT"],
+
     credentials: true,
   })
-);
-
-app.use(
-  cors((builder) =>
-    builder
-      .AllowAnyOrigin()
-      .AllowAnyMethod()
-      .AllowAnyHeader()
-      .AllowCredentials()
-  )
 );
 
 app.use(express.json());
@@ -62,7 +53,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://chatappbackend-sccd.onrender.com/",
+    origin: "https://verdant-lolly-234618.netlify.app",
     // credentials: true,
   },
 });

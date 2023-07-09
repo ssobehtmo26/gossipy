@@ -22,6 +22,7 @@ const MyChats = ({ fetchAgain }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
+          "Access-Control-Allow-Origin": 'true'
         },
       };
 
