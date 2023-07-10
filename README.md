@@ -42,13 +42,13 @@ Install dependencies
 Starting the server
 
 ```bash
-  // in backend terminal
+  // backend terminal
   npm start
 ```
 Starting the application
 
 ```bash
-  // in gossipy terminal  
+  // gossipy terminal  
   npm start
 ```
 
