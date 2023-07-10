@@ -90,5 +90,5 @@ Admin functionality
 
 ## Created By
 
-- [Om Choudhary](https://www.github.com/octokatherine)
+- [Om Choudhary]((https://github.com/ssobehtmo26)https://github.com/ssobehtmo26))
 
