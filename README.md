@@ -10,7 +10,7 @@ As the backend is hosted on a free Render account, there are some limitations to
 
 ## Features
 
-Gossipy is a Full Stack Real time Chatting Application. It Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database. The Tech Stacks used are -
+Gossipy is a Full Stack Real time Chatting Application. It uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database. The Tech Stacks used are -
 - React JS for frontend
 - Node JS, Express JS in server
 - MongoDB as Database
