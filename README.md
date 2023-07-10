@@ -1,7 +1,7 @@
 
 # Gossipy
 
-Live Project link : https://verdant-lolly-234618.netlify.app/
+Live Project link : [Gossipy](https://verdant-lolly-234618.netlify.app/)
 
 As the backend is hosted on a free Render account, there are some limitations to what can be achieved on a free plan, including reduced resources and slower processing times.
 
