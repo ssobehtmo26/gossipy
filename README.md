@@ -8,7 +8,7 @@ As the backend is hosted on a free Render account, there are some limitations to
 
 
 
-## Features
+## Tech Stacks
 
 Gossipy is a Full Stack Real time Chatting Application. It uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database. The Tech Stacks used are -
 - React JS for frontend
