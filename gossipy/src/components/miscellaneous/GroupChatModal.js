@@ -56,10 +56,13 @@ const GroupChatModal = ({ children }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
-          "Access-Control-Allow-Origin": 'true'
+          "Access-Control-Allow-Origin": "true",
         },
       };
-      const { data } = await axios.get(`https://chatappbackend-sccd.onrender.com/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatappbackend-sccd.onrender.com/api/user?search=${search}`,
+        config
+      );
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -136,28 +139,28 @@ const GroupChatModal = ({ children }) => {
           <ModalHeader
             fontSize="35px"
             fontFamily="Work sans"
-            d="flex"
+            display="flex"
             justifyContent="center"
           >
             Create Group Chat
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody d="flex" flexDir="column" alignItems="center">
+          <ModalBody display="flex" flexDirection="column" alignItems="center">
             <FormControl>
               <Input
                 placeholder="Chat Name"
-                mb={3}
+                marginBottom={3}
                 onChange={(e) => setGroupChatName(e.target.value)}
               />
             </FormControl>
             <FormControl>
               <Input
                 placeholder="Add Users eg: Luffy, Om, John"
-                mb={1}
+                marginBottom={1}
                 onChange={(e) => handleSearch(e.target.value)}
               />
             </FormControl>
-            <Box w="100%" d="flex" flexWrap="wrap">
+            <Box width="100%" display="flex" flexWrap="wrap">
               {selectedUsers.map((u) => (
                 <UserBadgeItem
                   key={u._id}

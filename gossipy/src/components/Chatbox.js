@@ -8,20 +8,22 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
 
   return (
     <Box
-      d={{ base: selectedChat ? "flex" : "none", md: "flex" }}
-      alignItems="center"
-      flexDir="column"
-      p={3}
-      bg="white"
-      w={{ base: "100%", md: "70%" }}
-      //h={400}
-      borderRadius="lg"
-      borderWidth="1px"
-      scrollBehavior="smooth"
-      overflow={"scroll"}
-    >
-      <SingleChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
-    </Box>
+  display={{ base: selectedChat ? "flex" : "none", md: "flex" }}
+  alignItems="center"
+  flexDirection="column"
+  p={3}
+  bg="white"
+  sx={{
+    width: { base: "100%", md: "68%" },
+    borderRadius: "lg",
+    borderWidth: "1px",
+    // scrollBehavior: "smooth", // Uncomment if needed
+    // overflow: "scroll", // Uncomment if needed
+  }}
+>
+  <SingleChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
+</Box>
+
   );
 };
 
