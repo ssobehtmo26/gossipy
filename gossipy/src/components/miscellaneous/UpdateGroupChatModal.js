@@ -44,7 +44,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
-          "Access-Control-Allow-Origin": "true",
+          "Access-Control-Allow-Origin": 'true'
         },
       };
       const { data } = await axios.get(

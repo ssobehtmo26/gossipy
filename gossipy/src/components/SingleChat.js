@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://chatappbackend-sccd.onrender.com";
+const ENDPOINT = "https://chatappbackend-sccd.onrender.com"; 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -45,7 +45,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
-          "Access-Control-Allow-Origin": "true",
+          "Access-Control-Allow-Origin": 'true'
         },
       };
 
@@ -111,6 +111,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     socket.on("connected", () => setSocketConnected(true));
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop typing", () => setIsTyping(false));
+
   }, []);
 
   useEffect(() => {
@@ -122,8 +123,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   useEffect(() => {
     socket.on("message recieved", (newMessageRecieved) => {
       if (
-        !selectedChatCompare ||
-        selectedChatCompare._id !== newMessageRecieved.chat._id
+        !selectedChatCompare || selectedChatCompare._id !== newMessageRecieved.chat._id
       ) {
         if (!notification.includes(newMessageRecieved)) {
           setNotification([newMessageRecieved, ...notification]);
@@ -164,14 +164,14 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             fontSize={{ base: "28px", md: "30px" }}
             pb={3}
             px={2}
-            width="100%"
+            w="100%"
             fontFamily="Work sans"
-            display="flex"
+            d="flex"
             justifyContent={{ base: "space-between" }}
             alignItems="center"
           >
             <IconButton
-              display={{ base: "flex", md: "none" }}
+              d={{ base: "flex", md: "none" }}
               icon={<ArrowBackIcon />}
               onClick={() => setSelectedChat("")}
             />
@@ -195,21 +195,21 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               ))}
           </Text>
           <Box
-            display="flex"
-            flexDirection="column"
+            d="flex"
+            flexDir="column"
             justifyContent="flex-end"
             p={3}
             bg="#E8E8E8"
-            width="100%"
-            height="100%"
+            w="100%"
+            h="100%"
             borderRadius="lg"
             overflowY="hidden"
           >
             {loading ? (
               <Spinner
                 size="xl"
-                width={20}
-                height={20}
+                w={20}
+                h={20}
                 alignSelf="center"
                 margin="auto"
               />
@@ -248,12 +248,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           </Box>
         </>
       ) : (
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          height="100%"
-        >
+        <Box d="flex" alignItems="center" justifyContent="center" h="100%">
           <Text fontSize="3xl" pb={3} fontFamily="Work sans">
             Click on a user to start chatting
           </Text>

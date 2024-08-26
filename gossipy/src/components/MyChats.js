@@ -22,14 +22,11 @@ const MyChats = ({ fetchAgain }) => {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
-          "Access-Control-Allow-Origin": "true",
+          "Access-Control-Allow-Origin": 'true'
         },
       };
 
-      const { data } = await axios.get(
-        "https://chatappbackend-sccd.onrender.com/api/chat",
-        config
-      );
+      const { data } = await axios.get("https://chatappbackend-sccd.onrender.com/api/chat", config);
       setChats(data);
     } catch (error) {
       toast({
@@ -50,31 +47,29 @@ const MyChats = ({ fetchAgain }) => {
 
   return (
     <Box
-      display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
-      flexDirection="column"
+      d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
+      flexDir="column"
       alignItems="center"
       p={3}
       bg="white"
-      sx={{
-        width: { base: "100%", md: "31%" },
-        borderRadius: "lg",
-        borderWidth: "1px",
-      }}
+      w={{ base: "10%", md: "30%" }}
+      borderRadius="lg"
+      borderWidth="1px"
     >
       <Box
         pb={3}
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
         fontFamily="Work sans"
-        display="flex"
-        width="100%"
+        d="flex"
+        w="100%"
         justifyContent="space-between"
         alignItems="center"
       >
         My Chats
         <GroupChatModal>
           <Button
-            display="flex"
+            d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
           >
@@ -83,12 +78,12 @@ const MyChats = ({ fetchAgain }) => {
         </GroupChatModal>
       </Box>
       <Box
-        display="flex"
-        flexDirection="column"
+        d="flex"
+        flexDir="column"
         p={3}
         bg="#F8F8F8"
-        width="100%"
-        height="100%"
+        w="100%"
+        h="100%"
         borderRadius="lg"
         overflowY="hidden"
       >

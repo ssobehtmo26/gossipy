@@ -74,14 +74,11 @@ function SideDrawer() {
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
-          "Access-Control-Allow-Origin": "true",
+          "Access-Control-Allow-Origin": 'true'
         },
       };
 
-      const { data } = await axios.get(
-        `https://chatappbackend-sccd.onrender.com/api/user?search=${search}`,
-        config
-      );
+      const { data } = await axios.get(`https://chatappbackend-sccd.onrender.com/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -108,11 +105,7 @@ function SideDrawer() {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(
-        `https://chatappbackend-sccd.onrender.com/api/chat`,
-        { userId },
-        config
-      );
+      const { data } = await axios.post(`https://chatappbackend-sccd.onrender.com/api/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
@@ -133,18 +126,18 @@ function SideDrawer() {
   return (
     <>
       <Box
-        display="flex"
+        d="flex"
         justifyContent="space-between"
         alignItems="center"
         bg="white"
-        width="100%"
-        padding="5px 10px 5px 10px"
+        w="100%"
+        p="5px 10px 5px 10px"
         borderWidth="5px"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
             <i className="fas fa-search"></i>
-            <Text display={{ base: "none", md: "flex" }} px={4}>
+            <Text d={{ base: "none", md: "flex" }} px={4}>
               Search User
             </Text>
           </Button>
@@ -159,7 +152,7 @@ function SideDrawer() {
                 count={notification.length}
                 effect={Effect.SCALE}
               />
-              <BellIcon fontSize="2xl" m={1} />
+              <BellIcon fontSize="2xl" m={1}  />
             </MenuButton>
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
@@ -189,7 +182,7 @@ function SideDrawer() {
             </MenuButton>
             <MenuList>
               <ProfileModal user={user}>
-                <MenuItem>My Profile</MenuItem>
+                <MenuItem>My Profile</MenuItem>{" "}
               </ProfileModal>
               <MenuDivider />
               <MenuItem onClick={logoutHandler}>Logout</MenuItem>
@@ -203,10 +196,10 @@ function SideDrawer() {
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Search Users</DrawerHeader>
           <DrawerBody>
-            <Box display="flex" paddingBottom={2}>
+            <Box d="flex" pb={2}>
               <Input
                 placeholder="Search by name or email"
-                marginRight={2}
+                mr={2}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -223,7 +216,7 @@ function SideDrawer() {
                 />
               ))
             )}
-            {loadingChat && <Spinner ml="auto" display="flex" />}
+            {loadingChat && <Spinner ml="auto" d="flex" />}
           </DrawerBody>
         </DrawerContent>
       </Drawer>
