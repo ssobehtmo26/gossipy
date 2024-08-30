@@ -57,35 +57,31 @@ Starting the application
 ## Features
 
 Login
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/95f5b418-0733-427c-8bff-2e329dec053f)
+![image](https://github.com/user-attachments/assets/10d03275-3957-4a8c-bd0f-91c83bcb3f9d)
 
 Signup
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/af4c79a5-4ff7-4272-aed7-5b6812b080a4)
+![image](https://github.com/user-attachments/assets/56e59cf0-a251-4d67-9a96-ff92dc2cd115)
 
 Homepage
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/be52dcce-12f4-4fa3-93ca-db1ab6e4c7c9)
+![image](https://github.com/user-attachments/assets/5e1f9bd2-c12c-47ed-80d4-a9bc0ccd2714)
 
 Search User
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/a7fe285d-943f-42b1-b9ab-b03aae138f05)
+![image](https://github.com/user-attachments/assets/cf0dd58d-5d4c-4883-b6fa-f32b5ccfd5b0)
 
 Notification
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/9204a279-1970-4f27-939d-b561258fc39a)
+![image](https://github.com/user-attachments/assets/e6279893-cfb4-4e84-ad75-ae1a6cbce294)
 
 View Profile
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/40a68887-08ed-4cbe-a9e0-0e94ba389ae3)
+![image](https://github.com/user-attachments/assets/6cdd1e92-4453-4c80-b5ca-aa77205ecf3e)
 
 Chat Box
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/24dc82f3-dacb-41e4-ac87-ebbaeca91647)
+![image](https://github.com/user-attachments/assets/e3b63a53-2770-48e3-a10e-51af5f76abad)
 
 Group Chat
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/9d1c1f7a-7c36-4e25-be6a-a6d20e0547e4)
+![image](https://github.com/user-attachments/assets/0446b0c7-7f3e-4ebd-aa8c-7a136e303207)
 
 Admin functionality
-![image](https://github.com/ssobehtmo26/gossipy/assets/95176555/2a66d739-2bb2-48aa-b4c0-af9783ad9abb)
-
-
-
-
+![image](https://github.com/user-attachments/assets/1592e020-61f3-4b28-b1dc-9a600160ff7b)
 
 
 ## Created By
